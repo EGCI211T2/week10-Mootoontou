@@ -6,7 +6,7 @@
 
 using namespace std;
 
-#include "Time.h"
+#include "Student.h"
 
 int main(int argc, char* argv[]) {
     vector<Student> students;

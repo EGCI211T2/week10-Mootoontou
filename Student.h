@@ -1,6 +1,6 @@
 // 1. Include Guard: ป้องกันไม่ให้โปรแกรมดึงไฟล์นี้ไปคอมไพล์ซ้ำซ้อน
-#ifndef TIME_H
-#define TIME_H
+#ifndef STUDENT_H
+#define STUDENT_H
 
 // 2. เรียกใช้ Library ที่จำเป็น
 #include <iostream>
