@@ -1,17 +1,31 @@
 #include <iostream>
-#include <iomanip>
+#include <vector>
+#include <string>
+#include <cstdlib>
+#include <climits>
 
 using namespace std;
 
 #include "Time.h"
 
-int main(){
-    struct Time t1,t2,t3;
-    cout<<"What time was it?";
-    getTime(t1);
-    cout<<"What time is it now?";
-    getTime(t2);
-    t3=subtract(t2,t1); //t3=t2-t1
-    cout<<"Time diff is ";
-    display(t3);
+int main(int argc, char* argv[]) {
+    vector<Student> students;
+    for(int i=1; i<argc; i+=2) {
+        if(i+1 < argc) {
+            string name = argv[i];
+            int age = atoi(argv[i+1]);
+            students.push_back(Student(name, age));
+        }
+    }
+    if(students.empty()) return 0;
+    int min_age = INT_MAX;
+    for(auto& s : students) {
+        if(s.getAge() < min_age) min_age = s.getAge();
+    }
+    for(auto& s : students) {
+        if(s.getAge() == min_age) {
+            s.display();
+        }
+    }
+    return 0;
 }

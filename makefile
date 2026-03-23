@@ -1,8 +1,8 @@
 compile: main.cpp 
-	 g++ main.cpp -o main
+	 g++ main.cpp -o student
 
-run: main
-	 ./main
+run: student
+	 ./student
 
-clean: main
-	 rm main
+clean: student
+	 rm student
